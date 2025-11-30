@@ -7,3 +7,4 @@ resources:
   - db-credentials.yaml
   - service.yaml
   - configmap.yaml
+  - storage.yaml

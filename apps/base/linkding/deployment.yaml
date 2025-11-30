@@ -11,11 +11,11 @@ spec:
     metadata:
       labels:
         app: linkding
-    spec:
-      securityContext:
-        fsGroup: 33
-        runAsUser: 33
-        runAsGroup: 33
+    # spec:
+    #   securityContext:
+    #     fsGroup: 33
+    #     runAsUser: 33
+    #     runAsGroup: 33
 
       containers:
         - name: linkding
@@ -53,3 +53,12 @@ spec:
           #     secretKeyRef:
           #       name: external-db-credentials
           #       key: DB_USER
+
+
+            volumeMounts:
+            - name: linkding-data
+              mountPath: /etc/linkding/data
+      volumes:
+        - name: linkding-data
+          persistentVolumeClaim:
+            claimName: linkding-data-pvc
