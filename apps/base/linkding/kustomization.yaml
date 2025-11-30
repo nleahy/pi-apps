@@ -6,3 +6,4 @@ resources:
   - namespace.yaml
   - db-credentials.yaml
   - service.yaml
+  - configmap.yaml
