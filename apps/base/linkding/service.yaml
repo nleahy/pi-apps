@@ -3,5 +3,8 @@ kind: Service
 metadata:
   name: external-db-service
 spec:
-  type: ExternalName
-  externalName: data-cluster-rw
+  ports:
+    - port: 9090
+  selector:
+    app: linkding
+  type: LoadBalancer
