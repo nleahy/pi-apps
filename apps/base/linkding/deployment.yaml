@@ -22,34 +22,34 @@ spec:
           image: sissbruecker/linkding:1.43.0
           ports:
             - containerPort: 9090
-          env:
-          - name: LD_DB_ENGINE
-            valueFrom:
-              configMapKeyRef:
-                name: linkding-configmap
-                key: LD_DB_ENGINE
-          - name: LD_DB_PORT
-            valueFrom:
-              configMapKeyRef:
-                name: linkding-configmap
-                key: LD_DB_PORT
-          - name: LD_DB_HOST
-            valueFrom:
-            secretKeyRef:
-              name: db-host
-              key: DB_HOST
-          - name: LD_DB_DATABASE
-            valueFrom:
-              secretKeyRef:
-                name: external-db-credentials
-                key: DB_NAME
-          - name: LD_DB_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: external-db-credentials
-                key: DB_PASSWORD
-          - name: LD_DB_USER
-            valueFrom:
-              secretKeyRef:
-                name: external-db-credentials
-                key: DB_USER
+          # env:
+          # - name: LD_DB_ENGINE
+          #   valueFrom:
+          #     configMapKeyRef:
+          #       name: linkding-configmap
+          #       key: LD_DB_ENGINE
+          # - name: LD_DB_PORT
+          #   valueFrom:
+          #     configMapKeyRef:
+          #       name: linkding-configmap
+          #       key: LD_DB_PORT
+          # - name: LD_DB_HOST
+          #   valueFrom:
+          #   secretKeyRef:
+          #     name: db-host
+          #     key: DB_HOST
+          # - name: LD_DB_DATABASE
+          #   valueFrom:
+          #     secretKeyRef:
+          #       name: external-db-credentials
+          #       key: DB_NAME
+          # - name: LD_DB_PASSWORD
+          #   valueFrom:
+          #     secretKeyRef:
+          #       name: external-db-credentials
+          #       key: DB_PASSWORD
+          # - name: LD_DB_USER
+          #   valueFrom:
+          #     secretKeyRef:
+          #       name: external-db-credentials
+          #       key: DB_USER
