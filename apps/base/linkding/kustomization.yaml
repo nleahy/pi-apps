@@ -8,3 +8,4 @@ resources:
   - service.yaml
   - configmap.yaml
   - storage.yaml
+  - default-super-user-creds.yaml
