@@ -43,11 +43,13 @@ spec:
               configMapKeyRef:
                 name: linkding-configmap
                 key: LD_DB_PORT
+          # - name: LD_DB_HOST
+          #   valueFrom:
+          #   secretKeyRef:
+          #     name: db-host
+          #     key: DB_HOST
           - name: LD_DB_HOST
-            valueFrom:
-            secretKeyRef:
-              name: db-host
-              key: DB_HOST
+            value: data-cluster-rw
           - name: LD_DB_DATABASE
             valueFrom:
               secretKeyRef:
