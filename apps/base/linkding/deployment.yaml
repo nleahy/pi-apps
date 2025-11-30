@@ -22,7 +22,16 @@ spec:
           image: sissbruecker/linkding:1.43.0
           ports:
             - containerPort: 9090
-          # env:
+          env:
+          - name: LD_SUPERUSER_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: super-user-creds
+          - name: LD_SUPERUSER_PASSWORD
+            valueFrom:
+              configMapKeyRef:
+                name: super-user-creds
+                key: LD_SUPERUSER_PASSWORD
           # - name: LD_DB_ENGINE
           #   valueFrom:
           #     configMapKeyRef:
