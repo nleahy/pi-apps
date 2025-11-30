@@ -27,6 +27,7 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: super-user-creds
+                key: LD_SUPERUSER_NAME
           - name: LD_SUPERUSER_PASSWORD
             valueFrom:
               secretKeyRef:
