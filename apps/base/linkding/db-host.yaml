@@ -1,0 +1,21 @@
+apiVersion: v1
+data:
+    DB_HOST: ENC[AES256_GCM,data:UciUZkjFTguEJXKkMbSNib+Tvs8=,iv:dLhEtJrT94gkNqdyEqAptHiPpn8rvupRU9Hkwb2nino=,tag:A7Da/t8iQE/ndFA7ay09aw==,type:str]
+kind: Secret
+metadata:
+    name: db-host
+sops:
+    age:
+        - recipient: age1zhwwl4kztlsqdcc4x7tvxschrr2z0625uade2vzuf0rnaeemmusq5x7aen
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBJUFJmS0NkU3p0ZmVDOWI2
+            WjFsVW9FblVKQmtZNVJlQjd5YXRFaTZQNkZVClNyeUpDTlN5ZFZ0MWZYb041VDl0
+            amMzV1llWE1YMzhWSHBHL2V0ekIzNnMKLS0tIDdMWExNaXNQaHBCTXhiS0ptMXFM
+            S2s5VGJibko4TkxxQytVNlpWK3BLMGMKqw9Ox/fh/ziTwrsFzVqfwrQPQXQ3urcs
+            DeWbtP4D9KJcI2BVMdN3NXkGL7/uQ43p/wjPbhIcUx1eZh2VLPkCgw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-11-30T02:13:08Z"
+    mac: ENC[AES256_GCM,data:a6dgC8gqnYYto7nexBDeHN/mntLQAys65uH1yKSkV9W+tiGuIWAR6ktoPdzSltPVXrNeFaW8ZNXi01xI3WIfiCFonY0lJs+ho6uG+KW+EXpV8RhwZERPbqaQrKdlFMck9SVB8PwV7/T8Oyw+VL/cmCFTMXO0EJMxiTr8j/G0XD8=,iv:PnoKDHi3suKVEFlBGYpcmAUT0iVct2in5XxKwwgF8Aw=,tag:VILl8uRjnAZGurS6ZlqajA==,type:str]
+    encrypted_regex: ^(data|stringData)$
+    version: 3.11.0

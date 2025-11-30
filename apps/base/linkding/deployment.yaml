@@ -34,7 +34,7 @@ spec:
           - name: LD_DB_HOST
             valueFrom:
             secretKeyRef:
-              name: external-db-credentials
+              name: db-host
               key: DB_HOST
           - name: LD_DB_DATABASE
             valueFrom:
