@@ -1,0 +1,39 @@
+ apiVersion: kustomize.toolkit.fluxcd.io/v1
+ kind: Kustomization
+ metadata:
+   name: database-setup
+   namespace: flux-system
+ spec:
+   interval: 1m0s
+   retryInterval: 1m
+   timeout: 5m
+   sourceRef:
+     kind: GitRepository
+     name: flux-system
+   path: ./databases/setup
+   prune: true
+   decryption:
+     provider: sops
+     secretRef:
+       name: sops-age
+---
+ apiVersion: kustomize.toolkit.fluxcd.io/v1
+ kind: Kustomization
+ metadata:
+   name: database-deployment
+   namespace: flux-system
+ spec:
+   interval: 1m0s
+   dependsOn: 
+    - name: database-setup
+   retryInterval: 1m
+   timeout: 5m
+   sourceRef:
+     kind: GitRepository
+     name: flux-system
+   path: ./databases/deployment
+   prune: true
+   decryption:
+     provider: sops
+     secretRef:
+       name: sops-age
