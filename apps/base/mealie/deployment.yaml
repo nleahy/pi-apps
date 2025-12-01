@@ -24,10 +24,32 @@ spec:
           name: mealie
           ports:
           -  containerPort: 9000
-          volumeMounts:
-            - mountPath: /app/data
-              name: mealie-data
-      volumes:
-          - name: mealie-data
-            persistentVolumeClaim:
-              claimName: mealie-data
+      #     volumeMounts:
+      #       - mountPath: /app/data
+      #         name: mealie-data
+      # volumes:
+      #     - name: mealie-data
+      #       persistentVolumeClaim:
+      #         claimName: mealie-data
+          env:
+          - name: DB_ENGINE
+            value: postgres
+          - name: POSTGRES_PORT
+            value: "5432"
+          - name: POSTGRES_SERVER
+            value: data-cluster-rw.databases
+          - name: POSTGRES_DB
+            valueFrom:
+              secretKeyRef:
+                name: external-db-credentials
+                key: DB_NAME
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: external-db-credentials
+                key: DB_PASSWORD
+          - name: POSTGRES_USER
+            valueFrom:
+              secretKeyRef:
+                name: external-db-credentials
+                key: DB_USER
