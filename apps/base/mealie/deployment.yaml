@@ -4,7 +4,7 @@ metadata:
   labels:
     app: mealie
   name: mealie
-  namespace: mealie
+  namespace: databases
 spec:
   replicas: 1
   selector:
@@ -37,7 +37,7 @@ spec:
           - name: POSTGRES_PORT
             value: "5432"
           - name: POSTGRES_SERVER
-            value: data-cluster-rw.databases
+            value: DATA_CLUSTER_RW_SERVICE_HOST
           - name: POSTGRES_DB
             valueFrom:
               secretKeyRef:
