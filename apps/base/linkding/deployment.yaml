@@ -49,7 +49,7 @@ spec:
           #     name: db-host
           #     key: DB_HOST
           - name: LD_DB_HOST
-            value: data-cluster-rw.databases
+            value: data-cluster-rw.databases.svc.localhost
           - name: LD_DB_DATABASE
             valueFrom:
               secretKeyRef:
