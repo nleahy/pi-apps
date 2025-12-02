@@ -9,3 +9,4 @@ resources:
   - configmap.yaml
   # - storage.yaml
   - default-super-user-creds.yaml
+  - cluster.yaml
