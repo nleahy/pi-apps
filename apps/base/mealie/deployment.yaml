@@ -4,7 +4,7 @@ metadata:
   labels:
     app: mealie
   name: mealie
-  namespace: mealie
+  namespace: d
 spec:
   replicas: 1
   selector:
@@ -24,13 +24,7 @@ spec:
           name: mealie
           ports:
           -  containerPort: 9000
-      #     volumeMounts:
-      #       - mountPath: /app/data
-      #         name: mealie-data
-      # volumes:
-      #     - name: mealie-data
-      #       persistentVolumeClaim:
-      #         claimName: mealie-data
+
           env:
           - name: DB_ENGINE
             value: postgres
@@ -53,3 +47,11 @@ spec:
               secretKeyRef:
                 name: external-db-credentials
                 key: DB_USER
+
+            volumeMounts:
+            - mountPath: /app/data
+              name: mealie-data
+      volumes:
+          - name: mealie-data
+            persistentVolumeClaim:
+              claimName: linkding-cluster-1
