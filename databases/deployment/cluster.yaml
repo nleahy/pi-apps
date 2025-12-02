@@ -1,7 +1,7 @@
 apiVersion: postgresql.cnpg.io/v1
 kind: Cluster
 metadata:
-  name: linkding-cluster
+  name: data-cluster
   namespace: databases
 spec:
   instances: 3
