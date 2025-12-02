@@ -7,10 +7,10 @@ spec:
   instances: 3
   storage:
     size: 1Gi
-    pvcTemplate:
-      accessModes:
-        - ReadWriteOnce
-      resources:
-        requests:
-          storage: 1Gi
-      volumeMode: Filesystem
+    # pvcTemplate:
+    #   accessModes:
+    #     - ReadWriteOnce
+    #   resources:
+    #     requests:
+    #       storage: 1Gi
+    #   volumeMode: Filesystem
