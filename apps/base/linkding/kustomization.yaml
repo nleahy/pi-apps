@@ -7,5 +7,5 @@ resources:
   - db-credentials.yaml
   - service.yaml
   - configmap.yaml
-  - storage.yaml
+  # - storage.yaml
   - default-super-user-creds.yaml
