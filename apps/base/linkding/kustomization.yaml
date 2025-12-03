@@ -13,3 +13,6 @@ resources:
   - deployment-test.yaml
   - db-test-credentials.yaml
   - service-test.yaml
+  - deployment-poc.yaml
+  - db-poc-credentials.yaml
+  - service-poc.yaml
