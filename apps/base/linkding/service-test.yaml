@@ -4,7 +4,7 @@ metadata:
   name: linkding-test
 spec:
   ports:
-    - port: 9000
+    - port: 9005
       protocol: TCP
       targetPort: 9090
   selector:
