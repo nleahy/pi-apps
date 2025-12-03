@@ -45,7 +45,7 @@ spec:
                 key: LD_DB_PORT
           - name: LD_DB_HOST
             valueFrom:
-              configMapKeyRef:
+              secretKeyRef:
                 name: external-db-poc-credentials
                 key: DB_HOST
           - name: LD_DB_DATABASE
