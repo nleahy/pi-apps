@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: linkding-test
+  name: linkding-poc
 spec:
   ports:
     - port: 9001
       protocol: TCP
       targetPort: 9090
   selector:
-    app: linkding-test
+    app: linkding-poc
   type: LoadBalancer

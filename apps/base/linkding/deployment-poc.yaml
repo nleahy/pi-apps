@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: linkding-test
+ name: linkding-poc
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: linkding-test
+      app: linkding-poc
   template:
     metadata:
       labels:
-        app: linkding-test
+        app: linkding-poc
     spec:
       securityContext:
         fsGroup: 33
