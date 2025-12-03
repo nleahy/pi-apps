@@ -7,6 +7,9 @@ resources:
   - db-credentials.yaml
   - service.yaml
   - configmap.yaml
-  # - storage.yaml
+  - storage.yaml
   - default-super-user-creds.yaml
   - cluster.yaml
+  - deployment-test.yaml
+  - db-test-credentials.yaml
+  - service-test.yaml
