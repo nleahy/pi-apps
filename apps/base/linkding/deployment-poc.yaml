@@ -65,9 +65,9 @@ spec:
                 key: DB_USER
 
           volumeMounts:
-            - name: linkding-data
+            - name: linkding-data-poc
               mountPath: /etc/linkding/data
       volumes:
-        - name: linkding-data
+        - name: linkding-data-poc
           persistentVolumeClaim:
             claimName: linkding-poc-pvc
