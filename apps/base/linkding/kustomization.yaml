@@ -16,3 +16,4 @@ resources:
   - deployment-poc.yaml
   - db-poc-credentials.yaml
   - service-poc.yaml
+  - storage-poc.yaml
